@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4600BAF31A571B5E00E33540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600BAF21A571B5E00E33540 /* AppDelegate.swift */; };
-		4600BAF51A571B5E00E33540 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600BAF41A571B5E00E33540 /* ViewController.swift */; };
 		4600BAF81A571B5E00E33540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4600BAF61A571B5E00E33540 /* Main.storyboard */; };
-		4600BAFA1A571B5E00E33540 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4600BAF91A571B5E00E33540 /* Images.xcassets */; };
 		4600BAFD1A571B5E00E33540 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4600BAFB1A571B5E00E33540 /* LaunchScreen.xib */; };
 		4600BB091A571B5E00E33540 /* CrashAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600BB081A571B5E00E33540 /* CrashAppTests.swift */; };
+		4600BB131A571E8200E33540 /* combined-crash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4600BB121A571E8200E33540 /* combined-crash.mp3 */; };
+		4600BB151A57256000E33540 /* genshai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4600BB141A57256000E33540 /* genshai.mp3 */; };
+		4600BB171A57256E00E33540 /* crash+pushit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4600BB161A57256E00E33540 /* crash+pushit.mp3 */; };
+		4600BB191A57257F00E33540 /* sure_it_looks_easy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4600BB181A57257F00E33540 /* sure_it_looks_easy.mp3 */; };
+		4600BB231A572E7000E33540 /* SoundPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600BB221A572E7000E33540 /* SoundPlayerViewController.swift */; };
+		4600BB271A572F9F00E33540 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4600BB261A572F9F00E33540 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		4600BAED1A571B5E00E33540 /* CrashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4600BAF11A571B5E00E33540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4600BAF21A571B5E00E33540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4600BAF41A571B5E00E33540 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4600BAF71A571B5E00E33540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4600BAF91A571B5E00E33540 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4600BAFC1A571B5E00E33540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4600BB021A571B5E00E33540 /* CrashAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4600BB071A571B5E00E33540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4600BB081A571B5E00E33540 /* CrashAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashAppTests.swift; sourceTree = "<group>"; };
+		4600BB121A571E8200E33540 /* combined-crash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "combined-crash.mp3"; sourceTree = "<group>"; };
+		4600BB141A57256000E33540 /* genshai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = genshai.mp3; sourceTree = "<group>"; };
+		4600BB161A57256E00E33540 /* crash+pushit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crash+pushit.mp3"; sourceTree = "<group>"; };
+		4600BB181A57257F00E33540 /* sure_it_looks_easy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sure_it_looks_easy.mp3; sourceTree = "<group>"; };
+		4600BB221A572E7000E33540 /* SoundPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayerViewController.swift; sourceTree = "<group>"; };
+		4600BB261A572F9F00E33540 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +86,14 @@
 			isa = PBXGroup;
 			children = (
 				4600BAF21A571B5E00E33540 /* AppDelegate.swift */,
-				4600BAF41A571B5E00E33540 /* ViewController.swift */,
+				4600BB221A572E7000E33540 /* SoundPlayerViewController.swift */,
+				4600BB261A572F9F00E33540 /* Images.xcassets */,
 				4600BAF61A571B5E00E33540 /* Main.storyboard */,
-				4600BAF91A571B5E00E33540 /* Images.xcassets */,
 				4600BAFB1A571B5E00E33540 /* LaunchScreen.xib */,
+				4600BB121A571E8200E33540 /* combined-crash.mp3 */,
+				4600BB141A57256000E33540 /* genshai.mp3 */,
+				4600BB181A57257F00E33540 /* sure_it_looks_easy.mp3 */,
+				4600BB161A57256E00E33540 /* crash+pushit.mp3 */,
 				4600BAF01A571B5E00E33540 /* Supporting Files */,
 			);
 			path = CrashApp;
@@ -161,6 +173,7 @@
 				TargetAttributes = {
 					4600BAEC1A571B5E00E33540 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 8XQ4V9ZJMX;
 					};
 					4600BB011A571B5E00E33540 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -193,8 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4600BAF81A571B5E00E33540 /* Main.storyboard in Resources */,
+				4600BB191A57257F00E33540 /* sure_it_looks_easy.mp3 in Resources */,
+				4600BB271A572F9F00E33540 /* Images.xcassets in Resources */,
 				4600BAFD1A571B5E00E33540 /* LaunchScreen.xib in Resources */,
-				4600BAFA1A571B5E00E33540 /* Images.xcassets in Resources */,
+				4600BB151A57256000E33540 /* genshai.mp3 in Resources */,
+				4600BB171A57256E00E33540 /* crash+pushit.mp3 in Resources */,
+				4600BB131A571E8200E33540 /* combined-crash.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4600BAF51A571B5E00E33540 /* ViewController.swift in Sources */,
+				4600BB231A572E7000E33540 /* SoundPlayerViewController.swift in Sources */,
 				4600BAF31A571B5E00E33540 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrashApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrashApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

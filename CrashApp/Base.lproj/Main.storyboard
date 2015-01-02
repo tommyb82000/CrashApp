@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1eM-Me-bqJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="jPd-a7-4rf">
+            <objects>
+                <tabBarController id="1eM-Me-bqJ" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gh3-3p-p7c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6Z3-wo-VCm"/>
+                        <segue destination="hxH-Ak-Ur8" kind="relationship" relationship="viewControllers" id="nZT-4M-WuH"/>
+                        <segue destination="6gT-4V-uvZ" kind="relationship" relationship="viewControllers" id="DcM-5M-U8A"/>
+                        <segue destination="Brp-MC-wZL" kind="relationship" relationship="viewControllers" id="ZO6-y4-wqu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcX-g2-VC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1594" y="53"/>
+        </scene>
+        <!--Sure it Looks Easy-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SoundPlayerViewController" customModule="CrashApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +37,242 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIS-Q6-yJF">
+                                <rect key="frame" x="16" y="20" width="568" height="531"/>
+                                <state key="normal" image="button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playCrash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNT-dm-OhE"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bopit" translatesAutoresizingMaskIntoConstraints="NO" id="05o-Yi-Rmj">
+                                <rect key="frame" x="16" y="20" width="568" height="531"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="05o-Yi-Rmj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="077-HV-eYJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sIS-Q6-yJF" secondAttribute="bottom" id="36t-7l-YHd"/>
+                            <constraint firstAttribute="centerY" secondItem="sIS-Q6-yJF" secondAttribute="centerY" id="5HR-Ge-Elx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="05o-Yi-Rmj" secondAttribute="bottom" id="ANm-1O-dvB"/>
+                            <constraint firstAttribute="centerX" secondItem="sIS-Q6-yJF" secondAttribute="centerX" id="HVe-cV-c0q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="05o-Yi-Rmj" secondAttribute="trailing" id="LcN-9L-a50"/>
+                            <constraint firstItem="sIS-Q6-yJF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wp2-XD-REd"/>
+                            <constraint firstItem="05o-Yi-Rmj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X8b-pW-mQ1"/>
+                            <constraint firstItem="sIS-Q6-yJF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Xql-sh-dbP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sIS-Q6-yJF" secondAttribute="trailing" id="n7v-Sy-nqy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5HR-Ge-Elx"/>
+                                <exclude reference="HVe-cV-c0q"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Bopit" id="7ky-69-5ez"/>
+                    <navigationItem key="navigationItem" title="Sure it Looks Easy" id="UJb-e1-6Vu"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="soundName" value="sure_it_looks_easy"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="05o-Yi-Rmj" id="G25-AI-Tpq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-774" y="1059"/>
+        </scene>
+        <!--Crash and Push it-->
+        <scene sceneID="dpI-yj-8IJ">
+            <objects>
+                <viewController id="Brp-MC-wZL" customClass="SoundPlayerViewController" customModule="CrashApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tWm-jF-I59"/>
+                        <viewControllerLayoutGuide type="bottom" id="OKE-wy-Ug7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2t8-3t-Ncq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZO-hu-nrG">
+                                <rect key="frame" x="16" y="20" width="568" height="531"/>
+                                <state key="normal" image="button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playCrash:" destination="Brp-MC-wZL" eventType="touchUpInside" id="LNn-sd-OIP"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jubular" translatesAutoresizingMaskIntoConstraints="NO" id="FlL-84-X74">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="FlL-84-X74" secondAttribute="bottom" id="9GF-Eb-5dQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FlL-84-X74" secondAttribute="bottom" id="MAA-bf-dnB"/>
+                            <constraint firstItem="AZO-hu-nrG" firstAttribute="top" secondItem="tWm-jF-I59" secondAttribute="bottom" id="Sdd-Gl-nqN"/>
+                            <constraint firstItem="FlL-84-X74" firstAttribute="top" secondItem="tWm-jF-I59" secondAttribute="bottom" id="bb2-nn-pD4"/>
+                            <constraint firstAttribute="centerY" secondItem="AZO-hu-nrG" secondAttribute="centerY" id="f20-Uz-p7P"/>
+                            <constraint firstItem="AZO-hu-nrG" firstAttribute="leading" secondItem="2t8-3t-Ncq" secondAttribute="leadingMargin" id="fqv-TD-DSc"/>
+                            <constraint firstItem="OKE-wy-Ug7" firstAttribute="top" secondItem="AZO-hu-nrG" secondAttribute="bottom" id="lFa-ck-6Dj"/>
+                            <constraint firstItem="FlL-84-X74" firstAttribute="leading" secondItem="2t8-3t-Ncq" secondAttribute="leadingMargin" id="lQO-RW-cWN"/>
+                            <constraint firstAttribute="centerX" secondItem="AZO-hu-nrG" secondAttribute="centerX" id="uFa-Ba-IGc"/>
+                            <constraint firstItem="FlL-84-X74" firstAttribute="trailing" secondItem="2t8-3t-Ncq" secondAttribute="trailingMargin" id="vog-sx-Btb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AZO-hu-nrG" secondAttribute="trailing" id="xiU-zV-a1T"/>
+                            <constraint firstItem="FlL-84-X74" firstAttribute="top" secondItem="tWm-jF-I59" secondAttribute="bottom" id="zeb-Qq-UeF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f20-Uz-p7P"/>
+                                <exclude reference="uFa-Ba-IGc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CrashPush" id="Ckw-mt-I8M"/>
+                    <navigationItem key="navigationItem" title="Crash and Push it" id="U9D-x3-Q8U"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="soundName" value="crash+pushit"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="crash" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="FlL-84-X74" id="jGz-lG-iaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfR-zZ-XLP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="53"/>
+        </scene>
+        <!--The Word is Genshai-->
+        <scene sceneID="Vjj-yy-1jF">
+            <objects>
+                <viewController id="6gT-4V-uvZ" customClass="SoundPlayerViewController" customModule="CrashApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nap-KY-LHq"/>
+                        <viewControllerLayoutGuide type="bottom" id="G3K-4K-l4I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WsB-Ub-3z5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRG-g8-VB7">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <state key="normal" image="button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playCrash:" destination="6gT-4V-uvZ" eventType="touchUpInside" id="rae-ag-XrW"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dunn2" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-Fo-pyS">
+                                <rect key="frame" x="16" y="35" width="568" height="531"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G3K-4K-l4I" firstAttribute="top" secondItem="fRG-g8-VB7" secondAttribute="bottom" id="0Xi-47-BWA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fRG-g8-VB7" secondAttribute="trailing" id="674-Ow-C18"/>
+                            <constraint firstItem="fRG-g8-VB7" firstAttribute="leading" secondItem="WsB-Ub-3z5" secondAttribute="leadingMargin" id="9EL-dS-gwM"/>
+                            <constraint firstItem="rwn-Fo-pyS" firstAttribute="leading" secondItem="WsB-Ub-3z5" secondAttribute="leadingMargin" id="Kiv-ze-Ww2"/>
+                            <constraint firstAttribute="centerX" secondItem="fRG-g8-VB7" secondAttribute="centerX" id="SIZ-Kg-trN"/>
+                            <constraint firstItem="fRG-g8-VB7" firstAttribute="top" secondItem="nap-KY-LHq" secondAttribute="bottom" id="SlB-ha-oHB"/>
+                            <constraint firstItem="rwn-Fo-pyS" firstAttribute="trailing" secondItem="WsB-Ub-3z5" secondAttribute="trailingMargin" id="Xn8-zv-eXo"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="rwn-Fo-pyS" secondAttribute="bottom" id="fS4-PP-EJ8"/>
+                            <constraint firstItem="rwn-Fo-pyS" firstAttribute="top" secondItem="nap-KY-LHq" secondAttribute="bottom" id="rXg-eP-6NP"/>
+                            <constraint firstAttribute="centerY" secondItem="fRG-g8-VB7" secondAttribute="centerY" id="tKD-Tv-byY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SIZ-Kg-trN"/>
+                                <exclude reference="tKD-Tv-byY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Genshai" id="rmz-v2-kUf"/>
+                    <navigationItem key="navigationItem" title="The Word is Genshai" id="9ZU-F1-Ued"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="soundName" value="genshai"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="rwn-Fo-pyS" id="KFh-Cg-SuK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zw-Sa-FxM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="-651"/>
+        </scene>
+        <!--Combined Crash-->
+        <scene sceneID="v9N-Bd-23v">
+            <objects>
+                <viewController id="hxH-Ak-Ur8" customClass="SoundPlayerViewController" customModule="CrashApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RHI-Z5-4TT"/>
+                        <viewControllerLayoutGuide type="bottom" id="jh1-CL-jEY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BUC-cP-n5q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpC-ZL-JsB">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <state key="normal" image="button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="soundName" value="sure_it_looks_easy"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playCrash:" destination="hxH-Ak-Ur8" eventType="touchUpInside" id="Ntx-Sd-xKl"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="jubular" translatesAutoresizingMaskIntoConstraints="NO" id="sig-yC-hL8">
+                                <rect key="frame" x="16" y="35" width="568" height="531"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sig-yC-hL8" firstAttribute="leading" secondItem="BUC-cP-n5q" secondAttribute="leadingMargin" id="Bod-90-KBm"/>
+                            <constraint firstItem="vpC-ZL-JsB" firstAttribute="leading" secondItem="BUC-cP-n5q" secondAttribute="leadingMargin" id="FA9-J6-geL"/>
+                            <constraint firstItem="sig-yC-hL8" firstAttribute="trailing" secondItem="BUC-cP-n5q" secondAttribute="trailingMargin" id="KEN-AY-Ex1"/>
+                            <constraint firstItem="sig-yC-hL8" firstAttribute="top" secondItem="RHI-Z5-4TT" secondAttribute="bottom" id="X1e-Cm-fF5"/>
+                            <constraint firstItem="sig-yC-hL8" firstAttribute="top" secondItem="RHI-Z5-4TT" secondAttribute="bottom" id="YNG-sB-Su2"/>
+                            <constraint firstAttribute="centerX" secondItem="vpC-ZL-JsB" secondAttribute="centerX" id="Ypq-eJ-wCc"/>
+                            <constraint firstItem="jh1-CL-jEY" firstAttribute="top" secondItem="vpC-ZL-JsB" secondAttribute="bottom" id="Zkq-3b-6yX"/>
+                            <constraint firstAttribute="centerY" secondItem="vpC-ZL-JsB" secondAttribute="centerY" id="dui-6z-GLU"/>
+                            <constraint firstItem="vpC-ZL-JsB" firstAttribute="top" secondItem="RHI-Z5-4TT" secondAttribute="bottom" id="mAB-xJ-UnA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vpC-ZL-JsB" secondAttribute="trailing" id="oLx-Zi-8C4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sig-yC-hL8" secondAttribute="bottom" id="pcj-Pu-6mR"/>
+                            <constraint firstItem="sig-yC-hL8" firstAttribute="trailing" secondItem="BUC-cP-n5q" secondAttribute="trailingMargin" id="tlL-fU-rWG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sig-yC-hL8" secondAttribute="bottom" id="xng-gA-5la"/>
+                            <constraint firstItem="sig-yC-hL8" firstAttribute="leading" secondItem="BUC-cP-n5q" secondAttribute="leadingMargin" id="z0L-Na-A6S"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ypq-eJ-wCc"/>
+                                <exclude reference="dui-6z-GLU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Combined Crash" id="cAO-P1-jBX"/>
+                    <navigationItem key="navigationItem" title="Combined Crash" id="Jdw-Lg-9YA"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="soundName" value="combined-crash"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="sig-yC-hL8" id="uNN-ab-gcI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xa7-0c-ER3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1594" y="-651"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bopit" width="200" height="112"/>
+        <image name="button" width="150" height="150"/>
+        <image name="dunn2" width="200" height="218"/>
+        <image name="jubular" width="74" height="112"/>
+    </resources>
 </document>
